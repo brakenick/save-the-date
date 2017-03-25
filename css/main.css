@@ -59,7 +59,6 @@ textarea {
 body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
     background: url(bg.jpg);
-    background: contain;
 }
 
 .wrapper {
@@ -159,11 +158,53 @@ nav a:hover {
 
 
 
+.wrapper {
+    width: 500px; /* 1140px - 10% for margins */
+    padding: 50px;
+     margin: 0 auto;
+}
+
+.content {
+    background: #fff;
+    padding: 10px 0;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+.border-box {
+
+    border: 15px solid #fff;
+    padding: 25px;
+}
+
+.break {
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    margin: 30px;
+}
 
 
 
+h1 {
+    font-size: 56px;
+    letter-spacing: 2px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
 
 
+
+h2 ,h3, h4 {
+    font-family: 'Fanwood Text', serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    line-height: 30px;
+}
+
+h4 {
+    line-height: 0;
+}
 
 
 
@@ -249,58 +290,6 @@ nav a:hover {
         width: 28%;
     }
 }
-
-
-
-.wrapper {
-    width: 500px; /* 1140px - 10% for margins */
-
-    padding: 50px;
-     margin: 0 auto;
-}
-
-.content {
-    background: #fff;
-    padding: 10px 0;
-    text-align: center;
-    -webkit-font-smoothing: antialiased;
-;
-}
-
-.border-box {
-
-    border: 15px solid #fff;
-    padding: 25px;
-}
-
-.break {
-    border-top: 5px solid;
-    border-bottom: 5px solid;
-    margin: 30px;
-}
-
-
-h1 {
-    font-size: 56px;
-    font-family: 'Open Sans Condensed', sans-serif;
-    letter-spacing: 3px;
-}
-
-h3, h4 {
-    font-family: 'Fanwood Text', serif;
-    text-transform: uppercase;
-}
-
-h2 {
-    line-height: 30px;
-}
-
-h4 {
-    line-height: 0;
-}
-
-
-
 
 
 @media only screen and (min-width: 1140px) {

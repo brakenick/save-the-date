@@ -26,19 +26,18 @@
             var regexS = "[\\?&]"+name+"=([^&#]*)"; 
             var regex = new RegExp( regexS ); 
             var results = regex.exec( window.location.href );
-             if( results == null )
-             return "";
-             else return results[1];}
+            if( results == null )
+            return "";
+            else 
+            results[1] = window.atob(results[1])
+            return results[1];}
     </script>
 
     <div class="bgimg">
 
-        <div class="container">
-       
+        <div class="container">       
                 <div class="col-md-4 col-md-offset-4">
-
                  <div class="border-box">
-
                     <div class="content">
 
                         <h2><script>document.write('Dear ' + decodeURIComponent(gup('name')));</script></h2>
@@ -55,9 +54,7 @@
                         <h3>Indooroopilly Golf Club</h3>
                         <h3>Invite to follow</h3>
                     </div>
-
                 </div> 
-
            </div> 
         </div> 
 

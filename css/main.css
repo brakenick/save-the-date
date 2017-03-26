@@ -56,9 +56,17 @@ textarea {
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
 
-body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
-    background: url(bg.jpg);
+body, html {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial; 
+        height: 100%;
+    width: 100%;
+}
+
+.bgimg {
+    background: url(bg.jpg); 
+    animation: hue-rotate 5s linear infinite;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .wrapper {
@@ -156,12 +164,9 @@ nav a:hover {
    ========================================================================== */
 
 
-
-
 .wrapper {
-    width: 500px; /* 1140px - 10% for margins */
-    padding: 50px;
-     margin: 0 auto;
+    width: 500px;
+    margin: 0 auto;
 }
 
 .content {
@@ -172,9 +177,7 @@ nav a:hover {
 }
 
 .border-box {
-
-    border: 15px solid #fff;
-    padding: 25px;
+    margin-top: 10px;
 }
 
 .break {
@@ -189,6 +192,8 @@ h1 {
     font-size: 56px;
     letter-spacing: 2px;
     font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    margin: 0;
 }
 
 
@@ -196,154 +201,37 @@ h1 {
 h2 ,h3, h4 {
     font-family: 'Fanwood Text', serif;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 h2 {
     line-height: 30px;
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
 }
 
 h4 {
     line-height: 0;
-}
-
-
-
-
-
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media only screen and (min-width: 480px) {
-
-/* ====================
-    INTERMEDIATE: Menu
-   ==================== */
-
-    nav a {
-        float: left;
-        width: 27%;
-        margin: 0 1.7%;
-        padding: 25px 2%;
-        margin-bottom: 0;
-    }
-
-    nav li:first-child a {
-        margin-left: 0;
-    }
-
-    nav li:last-child a {
-        margin-right: 0;
-    }
-
-/* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
-
-    nav ul li {
-        display: inline;
-    }
-
-    .oldie nav a {
-        margin: 0 0.7%;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-
-/* ====================
-    WIDE: CSS3 Effects
-   ==================== */
-
-    .header-container,
-    .main aside {
-        -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
-    }
-
-/* ============
-    WIDE: Menu
-   ============ */
-
-    .title {
-        float: left;
-    }
-
-    nav {
-        float: right;
-        width: 38%;
-    }
-
-/* ============
-    WIDE: Main
-   ============ */
-
-    .main article {
-        float: left;
-        width: 57%;
-    }
-
-    .main aside {
-        float: right;
-        width: 28%;
-    }
-}
-
-
-@media only screen and (min-width: 1140px) {
-
-/* ===============
-    Maximal Width
-   =============== */
+    font-size: 16px;
 
 }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
 
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
 
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
+@keyframes hue-rotate {
+  from {
+    -webkit-filter: hue-rotate(0);
+    -moz-filter: hue-rotate(0);
+    -ms-filter: hue-rotate(0);
+    filter: hue-rotate(0);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    -moz-filter: hue-rotate(360deg);
+    -ms-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
 }

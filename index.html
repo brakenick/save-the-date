@@ -37,8 +37,14 @@
                  <div class="border-box">
                     <div class="content">
 
-                        <h2><script>document.write('Dear ' + decodeURIComponent(gup('name')));</script></h2>
-                            
+                        <h2>
+                        <script>
+                        var name = gup('name');
+                        if(name){
+                            document.write('Dear ' + decodeURIComponent(name));
+                        }
+                        </script>
+                        </h2>                            
                         <h3>please save the date<h3/>
                         <h4>for The wedding of<h4/>  
 
